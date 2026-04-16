@@ -27,7 +27,7 @@ def voice_speak(text):
     engine.say(text)
 voice_speak("Hello, iam sangeetha")
 voice_speak("What's your plan today")
-engine.runAndWait()          '''
+engine.runAndWait()           
 
 import pyttsx3
 engine = pyttsx3.init()
@@ -48,7 +48,19 @@ else :
     response = "sorry ,i didnt understand that"
 print(response)
 speak_text(response)
-engine.runAndWait( )
+engine.runAndWait( ) '''
+
+import pyttsx3
+
+engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)   # 0 = male, 1 = female
+
+engine.say("This is female voice")
+engine.runAndWait()
+
+
 
     
 
